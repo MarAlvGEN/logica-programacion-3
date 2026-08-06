@@ -1,13 +1,12 @@
 const entrada = document.getElementById('entrada');
 const resultado = document.getElementById('resultado');
-form = document.getElementById('formulario');
 
 document.addEventListener('DOMContentLoaded', () => {
   entrada.value = '5';
   refresh();
 });
 
-form.addEventListener('input', () => {
+entrada.addEventListener('input', () => {
   refresh();
 });
 
