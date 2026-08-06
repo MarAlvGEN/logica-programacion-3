@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Factorial</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <main>
-      <h1>Factorial</h1>
-      <form action="" id="formulario" class="row">
-        <label for="entrada" class="col-lg-12">
-          <span> Entrada: </span>
+      <hgroup>
+        <h1 class="title" id="title" aria-label="Factorial"></h1>
+        <p class="subTitle">
+          Ingresa un <strong class="resultado">número</strong> superior a 0
+        </p>
+      </hgroup>
+      <form action="" id="formulario" class="container-label col">
+        <label for="entrada">
+          <span class="entrada"> Entrada: </span>
           <input
             required
             type="number"
@@ -29,27 +29,21 @@
             name="entrada"
             aria-label="entrada"
           />
-          <small>Ingresa un número superior a 0</small>
         </label>
-        <label for="resultado" class="col-12-lg">
-          <span> Resultado: </span>
+        <label for="resultado" class="container-label col">
+          <span>Resultado: </span>
           <output
             name="resultado"
             for="entrada"
             id="resultado"
             tabindex="0"
             aria-label="resultado"
+            class="resultado"
           >
           </output>
         </label>
       </form>
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-      defer
-    ></script>
     <script src="app.js" defer></script>
   </body>
 </html>
