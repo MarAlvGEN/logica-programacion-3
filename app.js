@@ -1,21 +1,21 @@
 const entrada = document.getElementById('entrada');
 const resultado = document.getElementById('resultado');
-const form = document.getElementById('formulario');
+form = document.getElementById('formulario');
 
-form.addEventListener('submit', (event) => {
-	event.preventDefault();
+form.addEventListener('input', () => {
+  let number = calcularFactorial(entrada.value);
 
-	const number = calcularFactorial(entrada.value);
-
-	resultado.textContent = number;
+  resultado.innerHTML = /* html */ `
+<p class="text-danger">${number}></p>
+`;
 });
 
 function calcularFactorial(num) {
-	let resultado = 1;
+  let resultado = 1;
 
-	for (let i = 1; i <= num; i++) {
-		resultado *= i;
-	}
+  for (let i = 1; i <= num; i++) {
+    resultado *= i;
+  }
 
-	return resultado;
+  return BigInt(resultado);
 }
