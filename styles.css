@@ -27,7 +27,7 @@ main {
 }
 
 hgroup {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,4 +79,37 @@ input {
   overflow-wrap: break-word;
   max-width: 100vw;
   font-size: 3rem;
+}
+
+@media (max-width: 1500px) {
+  .title {
+    font-size: 8rem;
+    min-height: auto;
+  }
+
+  .subTitle {
+    font-size: 2rem;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 5.5rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 2rem;
+  }
+
+  .resultado {
+    font-size: 1.5rem;
+  }
 }
